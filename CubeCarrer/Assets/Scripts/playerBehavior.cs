@@ -7,6 +7,7 @@ public class playerBehavior : MonoBehaviour
     public Rigidbody rb;
     public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
+    public float downwardsForce = -1f;
     public bool active = true;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class playerBehavior : MonoBehaviour
     {
         if (active)
         {
-            rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+            rb.AddForce(0, downwardsForce, forwardForce * Time.deltaTime);
             if (Input.GetKey("d"))
             {
                 rb.AddForce(sidewaysForce, 0, 0, ForceMode.VelocityChange);
@@ -31,7 +32,7 @@ public class playerBehavior : MonoBehaviour
         }
         if (rb.position.y < -1f)
         {
-            FindObjectOfType<GameManager>().EndGame();
+            FindFirstObjectByType<GameManager>().EndGame();
         }
     }
 
@@ -40,7 +41,7 @@ public class playerBehavior : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle")
         {
             active = false;
-            FindObjectOfType<GameManager>().EndGame();
+            FindFirstObjectByType<GameManager>().EndGame();
         }
     }
 }
