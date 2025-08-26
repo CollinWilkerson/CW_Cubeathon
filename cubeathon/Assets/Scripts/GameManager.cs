@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
         if (!gameHasEnded)
         {
             gameHasEnded = true;
-            Invoke("Restart", restartDelay);
+            Invoke("Restart", restartDelay); //calls restart after restart delay, like a one time coroutine
         }
     }
 
