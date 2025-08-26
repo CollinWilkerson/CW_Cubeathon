@@ -13,7 +13,12 @@ public enum Direction
 public class playerBehavior : MonoBehaviour
 {
     private Rigidbody rb;
+    private bool right = false;
+    private bool left = false;
+    private bool jump = false;
+    private bool isGrounded = false;
 
+    [SerializeField] float jumpForce = 10f;
     public float forwardForce = 2000f;
     public static Vector3 forwardVector;
     public float sidewaysForce = 500f;
@@ -27,19 +32,54 @@ public class playerBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        if (Input.GetKey("d"))
+        {
+            right = true;
+        }
+        if (Input.GetKey("a"))
+        {
+            left = true;
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            jump = true;
+        }
+        if (Physics.Raycast(transform.position, Vector3.down, 5.0f))
+        {
+            isGrounded = true;
+            //Debug.Log("isGrounded: " + isGrounded);
+            //Debug.Log("Jump: " + jump);
+        }
+        else
+        {
+            isGrounded = false;
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
+        //Debug.Log("Jump check: " + isGrounded + " " + jump);
         if (active)
         {
             rb.AddForce(forwardVector * forwardForce * Time.deltaTime);
-            if (Input.GetKey("d"))
+            if (right)
             {
                 rb.AddForce(sidewaysVector * sidewaysForce, ForceMode.VelocityChange);
+                right = false;
             }
-            if (Input.GetKey("a"))
+            if (left)
             {
                 rb.AddForce(-1 * sidewaysVector * sidewaysForce, ForceMode.VelocityChange);
+                left = false;
+            }
+            if (jump && isGrounded)
+            {
+                rb.AddForce(Vector3.up * jumpForce);
+                jump = false;
+                //Debug.Log("Execute");
             }
         }
         if (rb.position.y < -1f)
