@@ -46,7 +46,7 @@ public class playerBehavior : MonoBehaviour
         {
             jump = true;
         }
-        if (Physics.Raycast(transform.position, Vector3.down, 5.0f))
+        if (Physics.Raycast(transform.position, Vector3.down, 2.0f))
         {
             isGrounded = true;
             //Debug.Log("isGrounded: " + isGrounded);
