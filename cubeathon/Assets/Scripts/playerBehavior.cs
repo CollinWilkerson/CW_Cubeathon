@@ -103,6 +103,7 @@ public class playerBehavior : MonoBehaviour
         {
             case Direction.Forward:
                 forwardVector = Vector3.forward;
+                sidewaysVector = Vector3.right;
                 break;
             case Direction.Right:
                 forwardVector = Vector3.right;

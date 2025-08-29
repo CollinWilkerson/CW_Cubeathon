@@ -29,7 +29,7 @@ public class HomingAttack : MonoBehaviour
     private IEnumerator RangeCheckRoutine()
     {
         //how often the coroutine runs
-        WaitForSeconds wait = new WaitForSeconds(0.2f);
+        WaitForSeconds wait = new WaitForSeconds(0.1f);
 
         while (true)
         {
