@@ -59,5 +59,9 @@ public class HomingAttack : MonoBehaviour
             }
             activeTarget = target;
         }
+        else
+        {
+            activeTarget = null;
+        }
     }
 }
