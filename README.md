@@ -3,6 +3,6 @@
 
  Play at: https://collinwilkerson.github.io/CW_Cubeathon/
 
-Use A and D to move
+Use A and D to move, space to jump, LMB to homing attack and swing
 
 Avoid the cubes
