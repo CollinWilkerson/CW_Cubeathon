@@ -34,18 +34,6 @@ public class playerBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey("d"))
-        {
-            right = true;
-        }
-        if (Input.GetKey("a"))
-        {
-            left = true;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            jump = true;
-        }
         if (Physics.Raycast(transform.position, Vector3.down, 2.0f))
         {
             isGrounded = true;
@@ -118,5 +106,20 @@ public class playerBehavior : MonoBehaviour
                 sidewaysVector = Vector3.forward;
                 break;
         }
+    }
+
+    public void TurnLeft()
+    {
+        left = true;
+    }
+
+    public void TurnRight()
+    {
+        right = true;
+    }
+
+    public void Jump()
+    {
+        jump = true;
     }
 }

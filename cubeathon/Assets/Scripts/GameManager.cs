@@ -3,11 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    Invoker invoker;
     bool gameHasEnded = false;
 
     public float restartDelay = 1f;
 
     public GameObject completeUI;
+
+    private void Start()
+    {
+        invoker = FindAnyObjectByType<Invoker>();
+    }
 
     public void EndGame()
     {
@@ -22,6 +28,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Win");
         completeUI.SetActive(true);
+    }
+
+    private void Replay()
+    {
+        
     }
 
     void Restart()

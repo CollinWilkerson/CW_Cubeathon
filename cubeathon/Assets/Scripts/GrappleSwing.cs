@@ -36,7 +36,7 @@ public class GrappleSwing : MonoBehaviour
         DrawRope();
     }
 
-    void StartGrapple()
+    public void StartGrapple()
     {
         RaycastHit hit;
         //this is what actually looks for the player
@@ -86,7 +86,7 @@ public class GrappleSwing : MonoBehaviour
         lr.SetPosition(1, grapplePoint);
     }
 
-    void StopGrapple()
+    public void StopGrapple()
     {
         lr.positionCount = 0;
         Destroy(joint);

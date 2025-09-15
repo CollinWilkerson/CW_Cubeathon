@@ -14396,18 +14396,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2408393016580378758, guid: 1c375163854e2d34fa90b556faa00d02, type: 3}
-      propertyPath: jumpForce
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408393016580378758, guid: 1c375163854e2d34fa90b556faa00d02, type: 3}
-      propertyPath: forwardForce
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2408393016580378758, guid: 1c375163854e2d34fa90b556faa00d02, type: 3}
-      propertyPath: sidewaysForce
-      value: 1.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

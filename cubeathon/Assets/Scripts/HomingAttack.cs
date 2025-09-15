@@ -15,17 +15,6 @@ public class HomingAttack : MonoBehaviour
         StartCoroutine(RangeCheckRoutine());
     }
 
-    private void Update()
-    {
-        if (activeTarget != null)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                transform.position = activeTarget.position;
-            }
-        }
-    }
-
     private IEnumerator RangeCheckRoutine()
     {
         //how often the coroutine runs
@@ -62,6 +51,14 @@ public class HomingAttack : MonoBehaviour
         else
         {
             activeTarget = null;
+        }
+    }
+
+    public void Attack()
+    {
+        if (activeTarget != null)
+        {
+            transform.position = activeTarget.position;
         }
     }
 }
