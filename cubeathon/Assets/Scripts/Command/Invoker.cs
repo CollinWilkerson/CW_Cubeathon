@@ -1,6 +1,6 @@
-using UnityEngine;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 public class Invoker : MonoBehaviour
 {
     private bool _isRecording;
@@ -9,6 +9,7 @@ public class Invoker : MonoBehaviour
     private float _recordingTime;
     private SortedList<float, ICommand> _recordedCommands = 
         new SortedList<float, ICommand>();
+
 
     public void ExecuteCommand(ICommand command)
     {
@@ -67,7 +68,10 @@ public class Invoker : MonoBehaviour
             else
             {
                 _isReplaying = false;
+                FindAnyObjectByType<GameManager>().Restart();
             }
         }
     }
+
+    
 }

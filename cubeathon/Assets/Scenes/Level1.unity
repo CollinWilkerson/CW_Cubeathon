@@ -2016,7 +2016,7 @@ Transform:
   m_GameObject: {fileID: 1636049248}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1784248, y: 0.00000002313435, z: -0.0000000041950576, w: 0.98395354}
-  m_LocalPosition: {x: 15.3299265, y: -3.373551, z: -29.814293}
+  m_LocalPosition: {x: 15.3299265, y: -3.373551, z: -32.214294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2981,7 +2981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1547283749323277595, guid: f13ae9aac4837ad41ba1556b40ec06f1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.814293
+      value: -32.214294
       objectReference: {fileID: 0}
     - target: {fileID: 1547283749323277595, guid: f13ae9aac4837ad41ba1556b40ec06f1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3051,7 +3051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408393016580378756, guid: 1c375163854e2d34fa90b556faa00d02, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 2408393016580378756, guid: 1c375163854e2d34fa90b556faa00d02, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3272,6 +3272,26 @@ PrefabInstance:
       propertyPath: completeUI
       value: 
       objectReference: {fileID: 2115574787}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: cameras.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1636049248}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2039577506}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1107393914}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[3]'
+      value: 
+      objectReference: {fileID: 581487205}
     - target: {fileID: 7266904295524022961, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
       propertyPath: m_RootOrder
       value: 0

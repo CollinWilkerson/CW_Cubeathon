@@ -1,4 +1,3 @@
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
 public class InputHandeler : MonoBehaviour
@@ -7,7 +6,7 @@ public class InputHandeler : MonoBehaviour
     private Invoker invoker;
     private playerBehavior playerBehavior;
     private HomingAttack homingAttack;
-    private ICommand _buttonA, _buttonD, _buttonSpace, _buttonLM;
+    private ICommand _buttonA, _buttonAUp, _buttonD, _buttonDUp, _buttonSpace, _buttonLM;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,6 +16,8 @@ public class InputHandeler : MonoBehaviour
 
         _buttonA = new Left(playerBehavior);
         _buttonD = new Right(playerBehavior);
+        _buttonAUp = new LeftUp(playerBehavior);
+        _buttonDUp = new RightUp(playerBehavior);
         _buttonSpace = new Jump(playerBehavior);
         _buttonLM = new HAttack(homingAttack);
 
@@ -30,13 +31,21 @@ public class InputHandeler : MonoBehaviour
     {
         if (!isReplaying && isRecording)
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D))
             {
                 invoker.ExecuteCommand(_buttonD);
             }
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 invoker.ExecuteCommand(_buttonA);
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                invoker.ExecuteCommand(_buttonDUp);
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                invoker.ExecuteCommand(_buttonAUp);
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {

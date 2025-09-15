@@ -3,24 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    Invoker invoker;
     bool gameHasEnded = false;
 
+    [SerializeField] GameObject[] cameras;
     public float restartDelay = 1f;
 
     public GameObject completeUI;
 
-    private void Start()
-    {
-        invoker = FindAnyObjectByType<Invoker>();
-    }
 
     public void EndGame()
     {
         if (!gameHasEnded)
         {
             gameHasEnded = true;
-            Invoke("Restart", restartDelay); //calls restart after restart delay, like a one time coroutine
+            Invoke("Replay", restartDelay); //calls restart after restart delay, like a one time coroutine
         }
     }
 
@@ -32,10 +28,17 @@ public class GameManager : MonoBehaviour
 
     private void Replay()
     {
-        
+        foreach (GameObject go in cameras)
+        {
+            go.SetActive(false);
+        }
+        cameras[0].SetActive(true);
+        HomingTarget.Restart();
+        FindAnyObjectByType<playerBehavior>().ResetPosition();
+        FindAnyObjectByType<InputHandeler>().StartReplay();
     }
 
-    void Restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

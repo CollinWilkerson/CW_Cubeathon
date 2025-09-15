@@ -17,6 +17,7 @@ public class playerBehavior : MonoBehaviour
     private bool left = false;
     private bool jump = false;
     private bool isGrounded = false;
+    private Vector3 startPosition;
 
     [SerializeField] float jumpForce = 10f;
     public float forwardForce = 2000f;
@@ -30,6 +31,8 @@ public class playerBehavior : MonoBehaviour
         forwardVector = Vector3.forward;
         sidewaysVector = Vector3.right;
         rb = GetComponent<Rigidbody>();
+
+        startPosition = transform.position;
     }
 
     private void Update()
@@ -56,12 +59,10 @@ public class playerBehavior : MonoBehaviour
             if (right)
             {
                 rb.AddForce(sidewaysVector * sidewaysForce, ForceMode.VelocityChange);
-                right = false;
             }
             if (left)
             {
                 rb.AddForce(-1 * sidewaysVector * sidewaysForce, ForceMode.VelocityChange);
-                left = false;
             }
             if (jump && isGrounded)
             {
@@ -113,13 +114,33 @@ public class playerBehavior : MonoBehaviour
         left = true;
     }
 
+    public void StopTurnLeft()
+    {
+        left = false;
+    }
+
     public void TurnRight()
     {
         right = true;
+    }
+
+    public void StopTurnRight()
+    {
+        right = false;
     }
 
     public void Jump()
     {
         jump = true;
     }
+
+    public void ResetPosition()
+    {
+        rb.linearVelocity = Vector3.zero;
+        turn(Direction.Forward);
+        active = true;
+        transform.position = startPosition;
+        transform.rotation = Quaternion.identity;
+    }
+
 }
