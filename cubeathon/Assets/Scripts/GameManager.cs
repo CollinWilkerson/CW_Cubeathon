@@ -33,7 +33,10 @@ public class GameManager : MonoBehaviour
             go.SetActive(false);
         }
         cameras[0].SetActive(true);
-        HomingTarget.Restart();
+        if (FindAnyObjectByType<HomingTarget>())
+        {
+            HomingTarget.Restart();
+        }
         FindAnyObjectByType<playerBehavior>().ResetPosition();
         FindAnyObjectByType<InputHandeler>().StartReplay();
     }
