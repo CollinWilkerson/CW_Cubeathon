@@ -7,6 +7,9 @@ public class InputHandeler : MonoBehaviour
     private playerBehavior playerBehavior;
     private HomingAttack homingAttack;
     private ICommand _buttonA, _buttonAUp, _buttonD, _buttonDUp, _buttonSpace, _buttonLM;
+
+    public delegate void LMBPress();
+    public static event LMBPress OnLMB;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,6 +57,7 @@ public class InputHandeler : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 invoker.ExecuteCommand(_buttonLM);
+                OnLMB();
             }
         }
     }

@@ -19,6 +19,9 @@ public class playerBehavior : MonoBehaviour
     private bool isGrounded = false;
     private Vector3 startPosition;
 
+    public delegate void HitObstacle();
+    public static event HitObstacle OnHitObstacle;
+
     [SerializeField] float jumpForce = 10f;
     public float forwardForce = 2000f;
     public static Vector3 forwardVector;
@@ -81,6 +84,7 @@ public class playerBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
+            OnHitObstacle();
             active = false;
             FindAnyObjectByType<GameManager>().EndGame();
         }

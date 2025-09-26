@@ -1885,7 +1885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4868051495731598542, guid: c3674e09c51ef1b4585aa58ac8cede3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 61.6
+      value: 63.1
       objectReference: {fileID: 0}
     - target: {fileID: 4868051495731598542, guid: c3674e09c51ef1b4585aa58ac8cede3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6389,8 +6389,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1838765298}
-  - {fileID: 2039577511}
   - {fileID: 1636049249}
+  - {fileID: 2039577511}
   - {fileID: 1107393915}
   - {fileID: 581487206}
   - {fileID: 1394704243}
@@ -11554,6 +11554,149 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4212bf0c54f7f7488e93da93734ee5e, type: 3}
+--- !u!1 &1703896108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703896111}
+  - component: {fileID: 1703896110}
+  - component: {fileID: 1703896109}
+  m_Layer: 0
+  m_Name: YippePlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1703896109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703896108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a0a2a99dab05b44b09c5a5ba266d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thing: {fileID: 8300000, guid: fc18f46445deed0449f18e8cd9c3d047, type: 3}
+--- !u!82 &1703896110
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703896108}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9728fe0ceb7bfcd4ebaf35746e0d7521, type: 2}
+  m_audioClip: {fileID: 8300000, guid: fc18f46445deed0449f18e8cd9c3d047, type: 3}
+  m_Resource: {fileID: 8300000, guid: fc18f46445deed0449f18e8cd9c3d047, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1703896111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703896108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 785.5, y: 220, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1704092886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14409,6 +14552,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2630209449365135320, guid: 507d3025f2b266947ba7a8ced6f675c3, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2630209449365135322, guid: 507d3025f2b266947ba7a8ced6f675c3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -14514,6 +14661,30 @@ PrefabInstance:
       propertyPath: completeUI
       value: 
       objectReference: {fileID: 2115574787}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: cameras.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1636049248}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2039577506}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1107393914}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[3]'
+      value: 
+      objectReference: {fileID: 581487205}
+    - target: {fileID: 7266904295524022960, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
+      propertyPath: 'cameras.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1394704239}
     - target: {fileID: 7266904295524022961, guid: d44baa453f556f84bb50c8a9a175f9b6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14594,6 +14765,7 @@ SceneRoots:
   - {fileID: 377668269}
   - {fileID: 2107046286}
   - {fileID: 883718426}
+  - {fileID: 1703896111}
   - {fileID: 1083101892}
   - {fileID: 1202031434}
   - {fileID: 794609124}
