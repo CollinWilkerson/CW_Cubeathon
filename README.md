@@ -8,3 +8,7 @@ Use A and D to move, space to jump, LMB to homing attack and swing
 Avoid the cubes
 
 Game replays on death
+
+Green powerup makes you smaller
+
+Blue powerup makes you slower
